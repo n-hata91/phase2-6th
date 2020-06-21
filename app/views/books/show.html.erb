@@ -63,7 +63,7 @@
         <%= render 'book_comments/comment', book_comment: book_comment %>
     <% end %>
   </table>
-  <%= form_for [@book, @book_comment], remote: true do |f| %>
+  <%= form_with(model:[@book, @book_comment]) do |f| %>
     <div class="col-xs-9 my-4">
       <%= f.text_area :comment, class: "form-control" %>
     </div>
